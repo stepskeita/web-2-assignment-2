@@ -42,6 +42,19 @@
           font-size: 1.3rem;
         }
 
+        .product-category {
+          display: inline-block;
+          background-color: #e8f4fd;
+          color: #3498db;
+          padding: 4px 12px;
+          border-radius: 15px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
         .product-price {
           color: #27ae60;
           font-size: 1.5rem;
@@ -49,7 +62,42 @@
           margin: 0 0 10px 0;
         }
 
+        .product-rating {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          margin: 0 0 10px 0;
+
+          .stars {
+            color: #f39c12;
+            font-size: 1rem;
+          }
+
+          .rating-text {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+          }
+        }
+
         .product-stock {
+          margin: 0 0 10px 0;
+          font-size: 0.9rem;
+          font-weight: 600;
+
+          &.in-stock {
+            color: #27ae60;
+          }
+
+          &.low-stock {
+            color: #f39c12;
+          }
+
+          &.out-of-stock {
+            color: #e74c3c;
+          }
+        }
+
+        .product-sales {
           color: #7f8c8d;
           margin: 0 0 15px 0;
           font-size: 0.9rem;

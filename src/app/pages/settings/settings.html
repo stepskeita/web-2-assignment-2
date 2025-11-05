@@ -3,69 +3,349 @@
     <h1>Settings</h1>
   </div>
 
+  <div class="settings-navigation">
+    <ul class="nav-tabs">
+      <li><a href="#profile" class="tab-link active" data-tab="profile">Profile</a></li>
+      <li><a href="#account" class="tab-link" data-tab="account">Account</a></li>
+      <li><a href="#notifications" class="tab-link" data-tab="notifications">Notifications</a></li>
+      <li><a href="#security" class="tab-link" data-tab="security">Security</a></li>
+      <li><a href="#system" class="tab-link" data-tab="system">System</a></li>
+    </ul>
+  </div>
+
   <div class="settings-content">
-    <div class="settings-section">
-      <h2>Profile Settings</h2>
+    <div id="profile" class="settings-section active">
+      <h2>👤 Profile Information</h2>
+      <div class="profile-avatar">
+        <div class="avatar-preview">
+          <img
+            src="https://via.placeholder.com/100x100/3498db/white?text=JD"
+            alt="Profile Avatar"
+          />
+          <button class="avatar-change">📷 Change Photo</button>
+        </div>
+      </div>
+      <form class="settings-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" value="John" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" value="Doe" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" value="john.doe@company.com" class="form-control" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" value="+1 (555) 123-4567" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" class="form-control">
+              <option>Information Technology</option>
+              <option>Human Resources</option>
+              <option>Sales & Marketing</option>
+              <option>Finance</option>
+              <option>Operations</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea id="bio" class="form-control" rows="3" placeholder="Tell us about yourself...">
+Senior Software Developer with expertise in web technologies and system architecture.</textarea
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">💾 Save Profile</button>
+      </form>
+    </div>
+
+    <div id="account" class="settings-section">
+      <h2>⚙️ Account Settings</h2>
       <form class="settings-form">
         <div class="form-group">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" value="John Doe" class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" value="john.doe@example.com" class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="role">Role</label>
+          <label for="role">Account Role</label>
           <select id="role" class="form-control">
+            <option>Super Administrator</option>
             <option>Administrator</option>
             <option>Manager</option>
-            <option>User</option>
+            <option>Editor</option>
+            <option>Viewer</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Save Profile</button>
+        <div class="form-group">
+          <label for="timezone">Timezone</label>
+          <select id="timezone" class="form-control">
+            <option>UTC-08:00 (Pacific Time)</option>
+            <option>UTC-07:00 (Mountain Time)</option>
+            <option>UTC-06:00 (Central Time)</option>
+            <option>UTC-05:00 (Eastern Time)</option>
+            <option>UTC+00:00 (GMT)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="language">Language</label>
+            <select id="language" class="form-control">
+              <option>🇺🇸 English (US)</option>
+              <option>🇬🇧 English (UK)</option>
+              <option>🇪🇸 Español</option>
+              <option>🇫🇷 Français</option>
+              <option>🇩🇪 Deutsch</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dateFormat">Date Format</label>
+            <select id="dateFormat" class="form-control">
+              <option>MM/DD/YYYY</option>
+              <option>DD/MM/YYYY</option>
+              <option>YYYY-MM-DD</option>
+              <option>DD-MM-YYYY</option>
+            </select>
+          </div>
+        </div>
+        <div class="account-status">
+          <h4>Account Status</h4>
+          <div class="status-info">
+            <div class="status-item">
+              <span class="label">Status:</span>
+              <span class="badge badge-success">Active</span>
+            </div>
+            <div class="status-item">
+              <span class="label">Member Since:</span>
+              <span class="value">January 15, 2022</span>
+            </div>
+            <div class="status-item">
+              <span class="label">Last Login:</span>
+              <span class="value">Today at 9:15 AM</span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">💾 Save Account Settings</button>
       </form>
     </div>
 
-    <div class="settings-section">
-      <h2>Application Settings</h2>
-      <form class="settings-form">
-        <div class="form-group">
-          <label class="checkbox-label">
-            <input type="checkbox" checked /> Enable email notifications
-          </label>
+    <div id="notifications" class="settings-section">
+      <h2>🔔 Notification Preferences</h2>
+      <div class="notification-groups">
+        <div class="notification-group">
+          <h4>Email Notifications</h4>
+          <div class="notification-options">
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="label-text">New user registrations</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="label-text">Order confirmations</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+              <span class="label-text">System maintenance alerts</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="label-text">Weekly reports digest</span>
+            </label>
+          </div>
         </div>
-        <div class="form-group">
-          <label class="checkbox-label"> <input type="checkbox" /> Enable SMS notifications </label>
+
+        <div class="notification-group">
+          <h4>Push Notifications</h4>
+          <div class="notification-options">
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="label-text">Real-time alerts</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+              <span class="label-text">Daily summaries</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="label-text">Security notifications</span>
+            </label>
+          </div>
         </div>
-        <div class="form-group">
-          <label class="checkbox-label"> <input type="checkbox" checked /> Enable dark mode </label>
+
+        <div class="notification-group">
+          <h4>SMS Notifications</h4>
+          <div class="notification-options">
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+              <span class="label-text">Critical system alerts</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+              <span class="label-text">Security breach alerts</span>
+            </label>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="language">Language</label>
-          <select id="language" class="form-control">
-            <option>English</option>
-            <option>Spanish</option>
-            <option>French</option>
-            <option>German</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Save Settings</button>
-      </form>
+      </div>
     </div>
 
-    <div class="settings-section">
-      <h2>Security</h2>
-      <div class="security-section">
-        <div class="security-item">
-          <h4>Change Password</h4>
-          <p>Last changed 30 days ago</p>
-          <button class="btn btn-secondary">Update Password</button>
+    <div id="security" class="settings-section">
+      <h2>🔒 Security Settings</h2>
+      <div class="security-sections">
+        <div class="security-card">
+          <div class="security-header">
+            <h4>Password & Authentication</h4>
+            <span class="security-status good">🟢 Secure</span>
+          </div>
+          <div class="security-actions">
+            <div class="action-item">
+              <div class="action-info">
+                <h5>Change Password</h5>
+                <p>Last changed 23 days ago</p>
+              </div>
+              <button class="btn btn-outline">Update</button>
+            </div>
+            <div class="action-item">
+              <div class="action-info">
+                <h5>Two-Factor Authentication</h5>
+                <p>Enabled via Authenticator App</p>
+              </div>
+              <button class="btn btn-outline">Manage</button>
+            </div>
+          </div>
         </div>
-        <div class="security-item">
-          <h4>Two-Factor Authentication</h4>
-          <p>Add an extra layer of security to your account</p>
-          <button class="btn btn-secondary">Enable 2FA</button>
+
+        <div class="security-card">
+          <div class="security-header">
+            <h4>Login Activity</h4>
+            <span class="security-status warning">🟡 Review</span>
+          </div>
+          <div class="login-sessions">
+            <div class="session-item">
+              <div class="session-info">
+                <h5>💻 Current Session</h5>
+                <p>MacBook Pro • Chrome • San Francisco, CA</p>
+                <span class="session-time">Active now</span>
+              </div>
+            </div>
+            <div class="session-item">
+              <div class="session-info">
+                <h5>📱 Mobile Device</h5>
+                <p>iPhone • Safari • San Francisco, CA</p>
+                <span class="session-time">2 hours ago</span>
+              </div>
+              <button class="btn btn-sm btn-danger">Revoke</button>
+            </div>
+            <div class="session-item">
+              <div class="session-info">
+                <h5>💻 Windows PC</h5>
+                <p>Windows • Edge • New York, NY</p>
+                <span class="session-time">1 day ago</span>
+              </div>
+              <button class="btn btn-sm btn-danger">Revoke</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="security-card">
+          <div class="security-header">
+            <h4>API & Integrations</h4>
+          </div>
+          <div class="api-section">
+            <div class="api-item">
+              <div class="api-info">
+                <h5>API Keys</h5>
+                <p>Manage your API access tokens</p>
+              </div>
+              <button class="btn btn-outline">Manage Keys</button>
+            </div>
+            <div class="api-item">
+              <div class="api-info">
+                <h5>Connected Apps</h5>
+                <p>3 third-party applications connected</p>
+              </div>
+              <button class="btn btn-outline">Review Apps</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="system" class="settings-section">
+      <h2>🖥️ System Configuration</h2>
+      <div class="system-sections">
+        <div class="system-card">
+          <h4>Application Preferences</h4>
+          <div class="system-options">
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="label-text">Enable dark mode</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+              <span class="label-text">Compact view mode</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+              <span class="label-text">Auto-save changes</span>
+            </label>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+              <span class="label-text">Show keyboard shortcuts</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <h4>Data & Privacy</h4>
+          <div class="privacy-options">
+            <div class="privacy-item">
+              <h5>Data Export</h5>
+              <p>Download a copy of your data</p>
+              <button class="btn btn-outline">📥 Export Data</button>
+            </div>
+            <div class="privacy-item">
+              <h5>Account Deletion</h5>
+              <p>Permanently delete your account and data</p>
+              <button class="btn btn-danger">🗑️ Delete Account</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <h4>System Information</h4>
+          <div class="system-info">
+            <div class="info-item">
+              <span class="info-label">Application Version:</span>
+              <span class="info-value">v2.4.1</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Last Updated:</span>
+              <span class="info-value">December 15, 2024</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Database Version:</span>
+              <span class="info-value">PostgreSQL 14.5</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Server Status:</span>
+              <span class="info-value status-online">🟢 Online</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

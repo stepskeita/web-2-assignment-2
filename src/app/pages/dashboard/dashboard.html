@@ -5,36 +5,207 @@
   </div>
 
   <div class="dashboard-grid">
-    <div class="stat-card">
-      <h3>Total Users</h3>
-      <p class="stat-number">1,234</p>
-      <span class="stat-change positive">+12%</span>
+    <div class="stat-card revenue">
+      <div class="stat-icon">💰</div>
+      <div class="stat-content">
+        <h3>Total Revenue</h3>
+        <p class="stat-number">$847,230</p>
+        <span class="stat-change positive">+15.3% from last month</span>
+      </div>
     </div>
 
-    <div class="stat-card">
-      <h3>Total Products</h3>
-      <p class="stat-number">567</p>
-      <span class="stat-change positive">+8%</span>
+    <div class="stat-card users">
+      <div class="stat-icon">👥</div>
+      <div class="stat-content">
+        <h3>Active Users</h3>
+        <p class="stat-number">12,847</p>
+        <span class="stat-change positive">+8.2% from last month</span>
+      </div>
     </div>
 
-    <div class="stat-card">
-      <h3>Total Orders</h3>
-      <p class="stat-number">890</p>
-      <span class="stat-change negative">-3%</span>
+    <div class="stat-card orders">
+      <div class="stat-icon">📦</div>
+      <div class="stat-content">
+        <h3>Total Orders</h3>
+        <p class="stat-number">3,456</p>
+        <span class="stat-change negative">-2.1% from last month</span>
+      </div>
     </div>
 
-    <div class="stat-card">
-      <h3>Revenue</h3>
-      <p class="stat-number">$45,678</p>
-      <span class="stat-change positive">+15%</span>
+    <div class="stat-card conversion">
+      <div class="stat-icon">📈</div>
+      <div class="stat-content">
+        <h3>Conversion Rate</h3>
+        <p class="stat-number">3.42%</p>
+        <span class="stat-change positive">+0.8% from last month</span>
+      </div>
     </div>
   </div>
 
   <div class="dashboard-content">
-    <div class="chart-section">
-      <h2>Analytics Overview</h2>
-      <div class="chart-placeholder">
-        <p>Charts and graphs will be displayed here</p>
+    <div class="main-charts">
+      <div class="chart-section large">
+        <div class="chart-header">
+          <h2>📊 Sales Overview</h2>
+          <div class="chart-controls">
+            <select class="chart-filter">
+              <option>Last 7 days</option>
+              <option>Last 30 days</option>
+              <option>Last 90 days</option>
+              <option>This year</option>
+            </select>
+          </div>
+        </div>
+        <div class="chart-placeholder large">
+          <div class="chart-demo">
+            <div class="chart-bars">
+              <div class="bar" style="height: 60%"><span class="value">$12,450</span></div>
+              <div class="bar" style="height: 45%"><span class="value">$9,120</span></div>
+              <div class="bar" style="height: 80%"><span class="value">$16,890</span></div>
+              <div class="bar" style="height: 35%"><span class="value">$7,230</span></div>
+              <div class="bar" style="height: 95%"><span class="value">$19,750</span></div>
+              <div class="bar" style="height: 70%"><span class="value">$14,320</span></div>
+              <div class="bar" style="height: 55%"><span class="value">$11,680</span></div>
+            </div>
+            <div class="chart-labels">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+              <span>Sun</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <h2>🎯 Performance Metrics</h2>
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <h4>Customer Satisfaction</h4>
+            <div class="metric-visual">
+              <div class="progress-circle" data-percent="92">
+                <div class="progress-text">92%</div>
+              </div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <h4>Server Uptime</h4>
+            <div class="metric-visual">
+              <div class="progress-circle" data-percent="99.8">
+                <div class="progress-text">99.8%</div>
+              </div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <h4>Response Time</h4>
+            <div class="metric-value">142ms</div>
+            <div class="metric-trend positive">↗ 12% faster</div>
+          </div>
+          <div class="metric-item">
+            <h4>Error Rate</h4>
+            <div class="metric-value">0.03%</div>
+            <div class="metric-trend positive">↘ 85% lower</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondary-content">
+      <div class="recent-activity">
+        <h3>📋 Recent Activity</h3>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon">👤</div>
+            <div class="activity-details">
+              <p class="activity-text">New user registration: <strong>Sarah Johnson</strong></p>
+              <span class="activity-time">5 minutes ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">📦</div>
+            <div class="activity-details">
+              <p class="activity-text">Order #12847 has been shipped</p>
+              <span class="activity-time">12 minutes ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">💳</div>
+            <div class="activity-details">
+              <p class="activity-text">Payment received: <strong>$1,299.99</strong></p>
+              <span class="activity-time">23 minutes ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">⚠️</div>
+            <div class="activity-details">
+              <p class="activity-text">System maintenance completed</p>
+              <span class="activity-time">1 hour ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">🎉</div>
+            <div class="activity-details">
+              <p class="activity-text">Monthly sales target achieved!</p>
+              <span class="activity-time">2 hours ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-stats">
+        <h3>⚡ Quick Stats</h3>
+        <div class="quick-stats-grid">
+          <div class="quick-stat">
+            <div class="quick-stat-number">147</div>
+            <div class="quick-stat-label">Orders Today</div>
+          </div>
+          <div class="quick-stat">
+            <div class="quick-stat-number">$23,456</div>
+            <div class="quick-stat-label">Today's Revenue</div>
+          </div>
+          <div class="quick-stat">
+            <div class="quick-stat-number">89.3%</div>
+            <div class="quick-stat-label">Customer Retention</div>
+          </div>
+          <div class="quick-stat">
+            <div class="quick-stat-number">2,134</div>
+            <div class="quick-stat-label">Page Views</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-products-widget">
+        <h3>🏆 Top Performing Products</h3>
+        <div class="top-products-list">
+          <div class="top-product">
+            <span class="product-rank">#1</span>
+            <span class="product-name">Wireless Headphones</span>
+            <span class="product-sales">$89,340</span>
+          </div>
+          <div class="top-product">
+            <span class="product-rank">#2</span>
+            <span class="product-name">Smartphone Case</span>
+            <span class="product-sales">$67,230</span>
+          </div>
+          <div class="top-product">
+            <span class="product-rank">#3</span>
+            <span class="product-name">Bluetooth Speaker</span>
+            <span class="product-sales">$54,120</span>
+          </div>
+          <div class="top-product">
+            <span class="product-rank">#4</span>
+            <span class="product-name">USB-C Charger</span>
+            <span class="product-sales">$43,890</span>
+          </div>
+          <div class="top-product">
+            <span class="product-rank">#5</span>
+            <span class="product-name">Laptop Stand</span>
+            <span class="product-sales">$38,560</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
