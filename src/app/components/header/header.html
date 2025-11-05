@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="header-content">
+    <div class="header-left">
+      <button class="mobile-menu-btn" (click)="toggleSidebar()" aria-label="Toggle menu">
+        <span class="hamburger-line" [class.active]="sidebarOpen"></span>
+        <span class="hamburger-line" [class.active]="sidebarOpen"></span>
+        <span class="hamburger-line" [class.active]="sidebarOpen"></span>
+      </button>
+      <div class="logo">
+        <h2>Admin Dashboard</h2>
+      </div>
+    </div>
+    <nav class="nav-menu">
+      <div class="header-actions">
+        <button class="notification-btn" aria-label="Notifications">
+          <span class="notification-icon">🔔</span>
+          <span class="notification-badge">3</span>
+        </button>
+        <div class="user-profile">
+          <span class="user-name">John Doe</span>
+          <div class="user-avatar">JD</div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

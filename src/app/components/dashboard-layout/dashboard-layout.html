@@ -1,0 +1,7 @@
+<div class="dashboard-layout" [class.sidebar-open]="sidebarOpen">
+  <app-header (sidebarToggle)="toggleSidebar()"></app-header>
+  <app-sidebar [isOpen]="sidebarOpen"></app-sidebar>
+  <main class="main-content" (click)="closeSidebarOnMobile()">
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,78 @@
+<aside class="sidebar" [class.mobile-open]="isOpen">
+  <div class="sidebar-header">
+    <div class="sidebar-brand">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">Admin Pro</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <h4 class="nav-section-title">Main Navigation</h4>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a
+            routerLink="/dashboard"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link"
+            title="Dashboard"
+          >
+            <i class="icon">📊</i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/users" routerLinkActive="active" class="nav-link" title="User Management">
+            <i class="icon">👥</i>
+            <span>Users</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/products"
+            routerLinkActive="active"
+            class="nav-link"
+            title="Product Management"
+          >
+            <i class="icon">📦</i>
+            <span>Products</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/reports"
+            routerLinkActive="active"
+            class="nav-link"
+            title="Reports & Analytics"
+          >
+            <i class="icon">📈</i>
+            <span>Reports</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-section">
+      <h4 class="nav-section-title">System</h4>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/settings" routerLinkActive="active" class="nav-link" title="Settings">
+            <i class="icon">⚙️</i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-info">
+      <div class="user-avatar-small">JD</div>
+      <div class="user-details">
+        <span class="user-name-small">John Doe</span>
+        <span class="user-role">Administrator</span>
+      </div>
+    </div>
+  </div>
+</aside>
