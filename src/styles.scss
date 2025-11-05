@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Global SCSS Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-family: 'Arial', sans-serif;
+
+// Global styles
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+// Admin Dashboard specific styles
+.admin-dashboard {
+  h1 {
+    color: $primary-color;
+    font-size: 2rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
