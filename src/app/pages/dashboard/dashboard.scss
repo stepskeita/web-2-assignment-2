@@ -27,22 +27,11 @@
       display: flex;
       align-items: center;
       transition: transform 0.3s, box-shadow 0.3s;
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-      }
-      &.revenue {
-        border-left: 5px solid #27ae60;
-      }
-      &.users {
-        border-left: 5px solid #3498db;
-      }
-      &.orders {
-        border-left: 5px solid #e67e22;
-      }
-      &.conversion {
-        border-left: 5px solid #9b59b6;
-      }
+      &:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+      &.revenue { border-left: 5px solid #27ae60; }
+      &.users { border-left: 5px solid #3498db; }
+      &.orders { border-left: 5px solid #e67e22; }
+      &.conversion { border-left: 5px solid #9b59b6; }
       .stat-icon {
         font-size: 3rem;
         margin-right: 20px;
@@ -59,21 +48,12 @@
           text-transform: uppercase;
           letter-spacing: 0.5px;
         }
-        .stat-number {
-          color: #2c3e50;
-          margin: 0 0 8px;
-          font-size: 2.2rem;
-          font-weight: bold;
-        }
+        .stat-number { color: #2c3e50; margin: 0 0 8px; font-size: 2.2rem; font-weight: bold; }
         .stat-change {
           font-size: 0.85rem;
           font-weight: 600;
-          &.positive {
-            color: #27ae60;
-          }
-          &.negative {
-            color: #e74c3c;
-          }
+          &.positive { color: #27ae60; }
+          &.negative { color: #e74c3c; }
         }
       }
     }
@@ -104,30 +84,17 @@
           justify-content: space-between;
           align-items: center;
           margin-bottom: 25px;
-          h2 {
-            color: #2c3e50;
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-          }
+          h2 { color: #2c3e50; margin: 0; font-size: 1.5rem; font-weight: 600; }
           .chart-filter {
             padding: 8px 15px;
             border: 2px solid #ecf0f1;
             border-radius: 6px;
             background: white;
             color: #2c3e50;
-            &:focus {
-              outline: none;
-              border-color: #3498db;
-            }
+            &:focus { outline: none; border-color: #3498db; }
           }
         }
-        h2 {
-          color: #2c3e50;
-          margin: 0 0 25px;
-          font-size: 1.5rem;
-          font-weight: 600;
-        }
+        h2 { color: #2c3e50; margin: 0 0 25px; font-size: 1.5rem; font-weight: 600; }
 
         .chart-placeholder {
           height: 300px;
@@ -175,13 +142,7 @@
             .chart-labels {
               display: flex;
               gap: 15px;
-              span {
-                width: 40px;
-                text-align: center;
-                font-size: 0.9rem;
-                color: #7f8c8d;
-                font-weight: 500;
-              }
+              span { width: 40px; text-align: center; font-size: 0.9rem; color: #7f8c8d; font-weight: 500; }
             }
           }
         }
@@ -192,11 +153,7 @@
           gap: 25px;
           .metric-item {
             text-align: center;
-            h4 {
-              color: #2c3e50;
-              margin: 0 0 15px;
-              font-size: 1rem;
-            }
+            h4 { color: #2c3e50; margin: 0 0 15px; font-size: 1rem; }
             .progress-circle {
               position: relative;
               width: 80px;
@@ -223,18 +180,11 @@
                 font-size: 1.1rem;
               }
             }
-            .metric-value {
-              color: #2c3e50;
-              font-size: 1.5rem;
-              font-weight: bold;
-              margin: 0 0 5px;
-            }
+            .metric-value { color: #2c3e50; font-size: 1.5rem; font-weight: bold; margin: 0 0 5px; }
             .metric-trend {
               font-size: 0.8rem;
               font-weight: 600;
-              &.positive {
-                color: #27ae60;
-              }
+              &.positive { color: #27ae60; }
             }
           }
         }
@@ -245,13 +195,11 @@
       display: flex;
       flex-direction: column;
       gap: 25px;
-      .recent-activity,
-      .quick-stats,
-      .top-products-widget {
+      .recent-activity, .quick-stats, .top-products-widget {
         background: white;
         padding: 25px;
         border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         h3 {
           color: #2c3e50;
           margin: 0 0 20px;
@@ -282,15 +230,9 @@
             color: #2c3e50;
             font-size: 0.9rem;
             line-height: 1.4;
-            strong {
-              font-weight: 600;
-              color: #3498db;
-            }
+            strong { font-weight: 600; color: #3498db; }
           }
-          .activity-time {
-            color: #95a5a6;
-            font-size: 0.8rem;
-          }
+          .activity-time { color: #95a5a6; font-size: 0.8rem; }
         }
       }
 
@@ -303,17 +245,8 @@
           padding: 15px;
           background: #f8f9fa;
           border-radius: 8px;
-          .quick-stat-number {
-            color: #2c3e50;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 0 5px;
-          }
-          .quick-stat-label {
-            color: #7f8c8d;
-            font-size: 0.8rem;
-            font-weight: 500;
-          }
+          .quick-stat-number { color: #2c3e50; font-size: 1.5rem; font-weight: bold; margin: 0 0 5px; }
+          .quick-stat-label { color: #7f8c8d; font-size: 0.8rem; font-weight: 500; }
         }
       }
       .top-product {
@@ -321,9 +254,7 @@
         align-items: center;
         padding: 12px 0;
         border-bottom: 1px solid #f8f9fa;
-        &:last-child {
-          border-bottom: none;
-        }
+        &:last-child { border-bottom: none; }
         .product-rank {
           width: 30px;
           height: 30px;
@@ -337,17 +268,8 @@
           font-size: 0.8rem;
           margin-right: 15px;
         }
-        .product-name {
-          flex: 1;
-          color: #2c3e50;
-          font-weight: 500;
-          font-size: 0.9rem;
-        }
-        .product-sales {
-          color: #27ae60;
-          font-weight: bold;
-          font-size: 0.9rem;
-        }
+        .product-name { flex: 1; color: #2c3e50; font-weight: 500; font-size: 0.9rem; }
+        .product-sales { color: #27ae60; font-weight: bold; font-size: 0.9rem; }
       }
     }
   }
